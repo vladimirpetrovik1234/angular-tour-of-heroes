@@ -1,0 +1,18 @@
+<h3><del>Top Heroes</del></h3>
+
+
+<div class="grid grid-pad">
+  <a  routerLink="/detail/{{hero.id}}" *ngFor="let hero of heroes" class="col-1-4">
+    <div class="module hero">
+      <h4>{{hero.name}} {{hero.id}}</h4>
+    </div>
+
+  </a>
+</div>
+
+<div *ngIf="greshka" class="error-text">
+  Nastana greshka: {{greshka}}
+  
+</div>
+
+<app-hero-search></app-hero-search>
